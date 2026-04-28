@@ -6,6 +6,7 @@ const app = express();
 
 const path = require("path");
 const fs = require("fs");
+const PORT = process.env.PORT || 3000
 
 
 const otpStore = {};
@@ -915,6 +916,6 @@ app.post("/report", (req, res) => {
 });
 
 
-app.listen(5000, () => {
-  console.log("Server Running on Port 5000");
+app.listen(PORT, () => {
+  console.log("Server Running on Port", PORT);
 });
